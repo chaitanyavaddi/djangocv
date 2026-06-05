@@ -48,19 +48,5 @@
     </div>
   </main>
 
-  <script>
-    document.addEventListener('click', function(e) {
-      if (e.target.closest('#modal-cancel-btn')) {
-        var m = document.getElementById('delete-modal');
-        if (m) m.setAttribute('hidden', '');
-        return;
-      }
-      if (e.target.closest('#modal-confirm-btn')) {
-        var form = document.getElementById('delete-org-form');
-        if (form) form.submit();
-        return;
-      }
-    });
-  </script>
 </body>
 </html>

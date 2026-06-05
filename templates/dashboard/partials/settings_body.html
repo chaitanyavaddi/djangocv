@@ -257,26 +257,24 @@ function resetColor(pickerId, textId, defaultValue) {
 var deleteOrgBtn = document.getElementById('delete-org-btn');
 if (deleteOrgBtn) {
   deleteOrgBtn.addEventListener('click', function() {
-    document.getElementById('modal-title-text').textContent = 'Delete organization?';
-    document.getElementById('modal-desc-text').innerHTML = 'This will permanently delete <strong>{{ request.org.name|escapejs }}</strong> and all its data. This cannot be undone.';
-    var btn = document.getElementById('modal-confirm-btn');
-    if (btn) { btn.querySelector('.modal-confirm-label').textContent = 'Delete'; }
-    document.getElementById('delete-modal').removeAttribute('hidden');
+    var modal = document.getElementById('delete-modal');
+    if (modal) modal.style.display = 'flex';
   });
 }
 
 document.addEventListener('click', function(e) {
+  var modal = document.getElementById('delete-modal');
+  if (!modal || modal.style.display === 'none') return;
   if (e.target.closest('#modal-cancel-btn')) {
-    document.getElementById('delete-modal').setAttribute('hidden', '');
+    modal.style.display = 'none';
     return;
   }
   if (e.target.closest('#modal-confirm-btn')) {
     document.getElementById('delete-org-form').submit();
     return;
   }
-  var modal = document.getElementById('delete-modal');
-  if (modal && !modal.hasAttribute('hidden') && e.target === modal) {
-    modal.setAttribute('hidden', '');
+  if (e.target === modal) {
+    modal.style.display = 'none';
   }
 });
 
