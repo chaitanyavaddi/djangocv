@@ -96,12 +96,41 @@ Search and replace `myapp` with your app name across:
 
 | File | What to change |
 |------|---------------|
-| `config/settings/base.py` | `MAIN_DOMAIN`, `BUNNY_CDN_BASE`, email froms |
+| `config/settings/base.py` | `MAIN_DOMAIN`, `BUNNY_CDN_BASE`, email froms, brand colors, font |
 | `config/settings/dev.py` | `MAIN_DOMAIN`, cookie domains |
 | `config/settings/prod.py` | `ALLOWED_HOSTS`, `MAIN_DOMAIN`, cookie domains |
 | `.env.example` | all `myapp.com` references |
 | `traefik.yml` | all `myapp.com` and `myapp-` references |
 | `templates/base.html` | site name in nav and footer |
+
+---
+
+## Customising brand colors and fonts
+
+Everything lives in `config/settings/base.py` — no template changes needed.
+
+### Colors
+
+```python
+BRAND_PRIMARY   = "#e67f0f"   # buttons, links, accents
+BRAND_SECONDARY = "#f5f2ee"   # backgrounds, subtle tones
+```
+
+These are also editable per-org from the dashboard Settings → Appearance tab.
+
+### Font
+
+```python
+BRAND_FONT_URL    = "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+BRAND_FONT_FAMILY = "'Inter', system-ui, sans-serif"
+```
+
+To switch fonts:
+1. Go to [fonts.google.com](https://fonts.google.com), pick a font, copy the `<link>` URL
+2. Paste the URL into `BRAND_FONT_URL`
+3. Set `BRAND_FONT_FAMILY` to the font name exactly as Google lists it — e.g. `"'Lato', sans-serif"`
+
+The font loads in every page (`base.html` and `dashboard/base.html`) and is applied via CSS variables (`--font-ui`, `--font-serif`, `--font-reading`) that `dashboard.css` reads from. One change propagates everywhere — auth pages, dashboard, headings, inputs, all of it.
 
 ---
 
