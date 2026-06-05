@@ -37,7 +37,6 @@ staticfiles/
 !.env.example
 
 # Editor
-.vscode/
 .idea/
 *.swp
 *.swo
