@@ -3,3 +3,6 @@ whitenoise
 resend
 template-partials
 psycopg2-binary
+gunicorn
+rcssmin
+rjsmin
