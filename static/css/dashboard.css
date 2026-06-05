@@ -95,7 +95,7 @@ html { font-size: 16px; scrollbar-gutter: stable; }
 ══════════════════════════════════════ */
 
 body.dash-page {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: var(--font-ui);
   background: white;
   background-image: none;
   display: block;
@@ -131,7 +131,7 @@ body.dash-page {
 }
 
 .dash-brand {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: var(--font-serif);
   color: var(--black);
   font-size: 1.2rem;
   font-weight: 600;
@@ -300,7 +300,7 @@ body.dash-page {
 }
 
 .stat-card-value {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: var(--font-serif);
   font-size: 2rem;
   font-weight: 400;
   color: var(--black);
@@ -332,7 +332,7 @@ body.dash-page {
 }
 
 .overview-welcome-verse {
-  font-family: 'Lora', Georgia, serif;
+  font-family: var(--font-reading);
   font-style: italic;
   font-size: 0.95rem;
   color: var(--accent);
@@ -497,7 +497,7 @@ body.dash-page {
 }
 
 .empty-posts-verse {
-  font-family: 'Lora', Georgia, serif;
+  font-family: var(--font-reading);
   font-style: italic;
   font-size: 1rem;
   color: var(--accent);
@@ -607,7 +607,7 @@ body.dash-page {
 }
 
 .post-row-title {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: var(--font-serif);
   font-size: 1rem;
   color: var(--black);
   transition: color 0.15s;
@@ -729,7 +729,7 @@ details[open] .settings-chevron { transform: rotate(180deg); }
 
 /* Section title — Playfair, numbered, gray closed / black open */
 .settings-section-title {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: var(--font-serif);
   font-size: 0.95rem;
   font-weight: 400;
   color: var(--gray);
@@ -1137,14 +1137,14 @@ details[open] .settings-label { font-weight: 400; }
 .sf-field { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.5rem; }
 .sf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
 .sf-row:has(.sf-field--narrow) { grid-template-columns: 1fr 120px 1fr; }
-.sf-label { font-size: 0.8rem; font-family: 'Inter', system-ui, sans-serif; color: #666; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; }
+.sf-label { font-size: 0.8rem; font-family: var(--font-ui); color: #666; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; }
 .sf-hint { font-size: 0.75rem; color: #aaa; text-transform: none; letter-spacing: 0; font-weight: 400; }
 .sf-input {
   border: 1px solid var(--border);
   border-radius: 6px;
   padding: 0.55rem 0.75rem;
   font-size: 0.9rem;
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: var(--font-ui);
   background: #fff;
   color: var(--black);
   transition: border-color 0.15s;
@@ -1155,7 +1155,7 @@ details[open] .settings-label { font-weight: 400; }
   border-radius: 6px;
   padding: 0.65rem 0.75rem;
   font-size: 0.875rem;
-  font-family: 'Lora', Georgia, serif;
+  font-family: var(--font-reading);
   line-height: 1.7;
   background: #fff;
   color: var(--black);
@@ -1172,7 +1172,7 @@ details[open] .settings-label { font-weight: 400; }
 
 .write-dashboard { max-width: 820px; margin: 3rem auto; padding: 0 2rem; }
 .write-dashboard h2 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: var(--font-serif);
   font-size: 1.5rem;
   font-weight: 400;
   margin-bottom: 1.5rem;
@@ -1293,7 +1293,7 @@ details[open] .settings-label { font-weight: 400; }
   box-shadow: 0 8px 32px rgba(0,0,0,.18);
 }
 .modal-title {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: var(--font-serif);
   font-size: 1.15rem; font-weight: 600;
   color: var(--black); margin-bottom: 0.55rem;
 }
@@ -1407,7 +1407,7 @@ details[open] .settings-label { font-weight: 400; }
   text-align: center;
 }
 .posts-empty-msg {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: var(--font-serif);
   font-size: 1.1rem;
   color: var(--black);
   margin-bottom: 0.4rem;
