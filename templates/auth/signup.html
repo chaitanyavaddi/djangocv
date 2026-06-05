@@ -18,7 +18,7 @@
     .auth-card { background: #fff; border: 1px solid #e0ddd8; border-radius: 12px; padding: 2.5rem 2rem; width: 100%; max-width: 380px; }
     .auth-logo { margin-bottom: 1.5rem; }
     .auth-logo svg { width: 40px; height: 40px; }
-    .auth-heading { font-family: 'Playfair Display', Georgia, serif; font-size: 1.5rem; font-weight: 600; color: #1a1a1a; margin-bottom: 0.3rem; }
+    .auth-heading { font-family: var(--brand-font); font-size: 1.5rem; font-weight: 600; color: #1a1a1a; margin-bottom: 0.3rem; }
     .auth-sub { font-size: 0.875rem; color: #6b6b6b; margin-bottom: 1.5rem; }
     .btn-google { display: flex; align-items: center; gap: 0.6rem; width: 100%; padding: 0.6rem 1rem; border: 1px solid #e0ddd8; border-radius: 7px; background: #fff; font-size: 0.875rem; font-family: inherit; color: #1a1a1a; cursor: pointer; text-decoration: none; transition: background 0.12s; margin-bottom: 1rem; }
     .btn-google:hover { background: #f5f4f0; }
@@ -133,10 +133,10 @@ document.addEventListener('click', function(e) {
   if (input.type === 'password') {
     input.type = 'text';
     eyeOn.style.display = 'none';
-    eyeOff.style.display = '';
+    eyeOff.style.display = 'inline';
   } else {
     input.type = 'password';
-    eyeOn.style.display = '';
+    eyeOn.style.display = 'inline';
     eyeOff.style.display = 'none';
   }
 });

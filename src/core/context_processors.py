@@ -9,4 +9,9 @@ def brand(request):
     else:
         primary   = getattr(settings, 'BRAND_PRIMARY',   '#3730a3')
         secondary = getattr(settings, 'BRAND_SECONDARY', '#2a6e96')
-    return {'brand_primary': primary, 'brand_secondary': secondary}
+    return {
+        'brand_primary':   primary,
+        'brand_secondary': secondary,
+        'brand_font_url':    getattr(settings, 'BRAND_FONT_URL',    ''),
+        'brand_font_family': getattr(settings, 'BRAND_FONT_FAMILY', "'Inter', system-ui, sans-serif"),
+    }

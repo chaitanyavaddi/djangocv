@@ -99,6 +99,12 @@ BUNNY_CDN_BASE         = os.environ.get("BUNNY_CDN_BASE",         "https://cdn.m
 BRAND_PRIMARY   = "#e67f0f"
 BRAND_SECONDARY = "#f5f2ee"
 
+# ── Brand fonts ──────────────────────────────────────────────────────
+# Paste any Google Fonts (or other) URL here — it will be loaded in every page.
+# BRAND_FONT_FAMILY must match the font-family name(s) in that URL.
+BRAND_FONT_URL    = "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+BRAND_FONT_FAMILY = "'Inter', system-ui, sans-serif"
+
 CLOUDFLARE_API_TOKEN = os.environ.get('CLOUDFLARE_API_TOKEN', '')
 CLOUDFLARE_ZONE_ID   = os.environ.get('CLOUDFLARE_ZONE_ID',   '')
 

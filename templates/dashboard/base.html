@@ -6,11 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block title %}Dashboard{% endblock %} · {{ request.org.name|default:"MyApp" }}</title>
   {% if request.org.avatar %}<link rel="icon" type="image/png" href="{{ request.org.avatar }}">{% else %}<link rel="icon" type="image/svg+xml" href="/favicon.svg?c={{ brand_primary|urlencode }}">{% endif %}
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  {% if brand_font_url %}<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="{{ brand_font_url }}" rel="stylesheet">{% endif %}
   <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
-  <style>:root{--brand-primary:{{ brand_primary }};--brand-secondary:{{ brand_secondary }};}</style>
+  <style>:root{--brand-primary:{{ brand_primary }};--brand-secondary:{{ brand_secondary }};--brand-font:{{ brand_font_family }};}</style>
   <script src="https://unpkg.com/htmx.org@1.9.10/dist/htmx.min.js"></script>
   {% block extra_head %}{% endblock %}
 </head>
